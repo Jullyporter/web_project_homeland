@@ -1,0 +1,208 @@
+/* -----TELA 1280px----- */
+.place {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "title author"
+    "landscape  paragraph"
+    "button paragraph"
+    ".paragraph";
+  grid-gap: 48px 48px;
+}
+
+.place__title {
+  grid-area: title;
+  font-size: 4.5rem;
+  line-height: 4.75rem;
+  font-weight: 900;
+}
+
+.place__author {
+  grid-area: author;
+  align-self: end;
+  text-align: left;
+  margin-top: auto;
+}
+
+.place__author-subtitle {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 0.9rem;
+  letter-spacing: 0.12em;
+  color: #aaaaaa;
+  margin: 0px 0px 8px;
+}
+
+.place__author-name {
+  font-size: 1.12rem;
+  font-weight: 400;
+  line-height: 1.37rem;
+  margin: 0;
+}
+
+.place__landscape {
+  grid-area: landscape;
+  margin: 0 auto;
+  object-fit: contain;
+  box-shadow: 10px 10px 25px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid #aaaaaa;
+}
+
+.place__image {
+  width: 100%;
+  height: 460px;
+  margin: 0 auto;
+}
+
+.place__image:hover {
+  opacity: 0.5;
+}
+
+.place__description {
+  grid-area: paragraph;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 85%;
+  column-gap: 25px;
+}
+
+.place__paragraph {
+  font-weight: 400;
+  font-size: 1.12rem;
+  line-height: 1.83rem;
+  text-align: justify;
+  color: #fff;
+  margin: 0 0 25px 0;
+}
+
+.place__paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.place__button {
+  grid-area: button;
+  max-width: 80%;
+  padding: 13px 20px;
+  border-radius: 4px;
+  background-image: linear-gradient(90deg, #0278fe 0%, #003a7b 100%);
+  text-decoration: none;
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.36rem;
+  color: #fff;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  gap: 10px;
+}
+
+.place__button:hover {
+  background-image: linear-gradient(
+    90deg,
+    rgba(2, 120, 254, 0.25) 0%,
+    rgba(0, 58, 123, 0.25) 100%
+  );
+}
+
+/* ----BREAKPOINT - TELA 1024px-----*/
+@media screen and (max-width: 1024px) {
+  .place {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .place__title {
+    font-size: 3.75rem;
+    line-height: 4.06rem;
+  }
+
+  .place__paragraph {
+    font-size: 1.3rem;
+    line-height: 1.32rem;
+    margin: 0 0 15px 0;
+  }
+
+  .place__button {
+    max-width: 100%;
+    padding: 15px 20px;
+  }
+}
+
+/* -----TELA 768px----- */
+@media screen and (max-width: 768px) {
+  .place {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .place__title {
+    font-size: 2.62rem;
+    line-height: 2.87rem;
+  }
+
+  .place__author {
+    font-size: 1.12rem;
+    line-height: 1.37rem;
+  }
+
+  .place__paragraph {
+    font-size: 1rem;
+    line-height: 1.63rem;
+  }
+}
+
+/* ------------TELA 544px---------- */
+@media screen and (max-width: 544px) {
+  .place {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "author"
+      "landscape"
+      "paragraph"
+      "button";
+    width: 100%;
+    margin: 0 auto;
+    row-gap: 30px;
+  }
+
+  .place__title {
+    grid-area: title;
+    max-width: 90%;
+    font-size: 2rem;
+    line-height: 2.18rem;
+  }
+
+  .place__author {
+    width: 90%;
+  }
+
+  .place__paragraph {
+    font-size: 1rem;
+    line-height: 1.62rem;
+    margin: auto;
+  }
+
+  .place__button {
+    align-items: center;
+    font-size: larger;
+    max-width: 78%;
+  }
+}
+
+/* -----TELA 320px----- */
+@media screen and (max-width: 320px) {
+  .place {
+    max-width: 288px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "author"
+      "landscape"
+      "paragraph"
+      ".button";
+    margin: 0 auto;
+  }
+
+  .place__button {
+    font-size: 0.87rem;
+  }
+}

@@ -1,0 +1,43 @@
+/* -----TELA 1280px----- */
+.places {
+  max-width: 984px;
+  margin: 92px 148px 90px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 80px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----BREAKPOINT - TELA 1024px-----*/
+@media screen and (max-width: 1024px) {
+  .places {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}
+
+/* -----TELA 768px----- */
+@media screen and (max-width: 768px) {
+  .places {
+    max-width: 720px;
+    margin: 88px 24px 90px;
+    row-gap: 72px;
+  }
+}
+
+/* ------------TELA 544px---------- */
+@media screen and (max-width: 544px) {
+  .places {
+    max-width: 500px;
+    margin: 78px 14px 80px;
+  }
+}
+
+/* -----TELA 320px----- */
+@media screen and (max-width: 320px) {
+  .places {
+    max-width: 300px;
+    margin: 62px auto 65px;
+  }
+}
